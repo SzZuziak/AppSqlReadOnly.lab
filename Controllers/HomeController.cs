@@ -25,7 +25,6 @@ namespace AppSqlReadOnly.Lab.Controllers
         {
             var employees = await _unitOfWork.EmployeesRepository.GetAllAsync();
             return View(employees);
-
            
         }
         public async Task<IActionResult> EmployeesByCity()
@@ -33,14 +32,11 @@ namespace AppSqlReadOnly.Lab.Controllers
             var employeeByCity = await _unitOfWork.EmployeesRepository.GetByCityAsync("London");
             return View(employeeByCity);
 
-
         }
         public async Task<IActionResult> SingleEmployee()
         {
-            var employee = await _unitOfWork.EmployeesRepository.GetAsync(7);
+            var employee = await _unitOfWork.EmployeesRepository.GetAsync(3);
             return View(employee);
-
-
         }
 
         public async Task <IActionResult> Index()
