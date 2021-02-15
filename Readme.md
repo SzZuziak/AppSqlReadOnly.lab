@@ -1,0 +1,1 @@
+Napisać metody GetAsync(int id) i GetByCityAsync(string city)
